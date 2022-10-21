@@ -1,8 +1,5 @@
 <!DOCTYPE html>
-<!--
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edit this template
--->
+
 <html>
     <head>
         <meta http-equiv="content-type" content="text/html; charset="UTF-8">
@@ -10,29 +7,9 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
     </head>
     <body>
         <h1>Zarządzanie Postami</h1>
-        
-        
-
-
-
-        <?php
-
- 
-
-
-
-?>
-
-<h4>
-        Wybierz użytkowników lub posty
-    </h4>
+        <h4>Wybierz użytkowników lub posty</h4>
       
-
-    <form method="post">
-
-
-        
-
+        <form method="post">
         
         <input type="submit" name="Dodawanie"
         value="Resetowanie postów do wartości początkowych"/>
@@ -40,19 +17,12 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
         <input type="submit" name="postsList"
         value="Wyświetl posty z bazy danych"/>
 
-        
-
         <input type="submit" name="postDelete"
         value="Usuń post z bazy danych"/>
 
         <input type="text" value="Podaj ID posta" name="number" />
         
-
-
-        
-    
-      
-</form>
+        </form>
 
 
     <?php
@@ -60,31 +30,13 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
 $delNumber = $_POST['number'];
 
 
-
-
 $url = "https://jsonplaceholder.typicode.com/users";
 $dataUsers = file_get_contents($url); 
-//$users = json_decode($dataUsers); 
-
 $users = json_decode($dataUsers, true);
-
-//print_r($users); 
-
-
-echo "<br>";
-echo "---";
-echo "<br>";
 
 $url = "https://jsonplaceholder.typicode.com/posts";
 $dataPosts = file_get_contents($url); 
-//$posts = json_decode($dataPosts); 
 $post = json_decode($dataPosts, true);
-
-
-
-
-//print_r($posts); 
-
 
 if(isset($_POST['postsList'])) {
     echo "Posty w bazie danych";
@@ -194,11 +146,7 @@ for($i=0;$i<100; $i++)
             mysqli_close($mysqlConnection);
         
         
-              
-                
                 }
-
-
 ?>
 
 
