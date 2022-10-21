@@ -9,7 +9,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
         <title></title>
     </head>
     <body>
-        <h1>title</h1>
+        <h1>Zarządzanie Postami</h1>
         
         
 
